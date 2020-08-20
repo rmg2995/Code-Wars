@@ -7,9 +7,12 @@
 // If an object is missing the property, you should just leave it as undefined/None in the output array.
 
 function pluck(objs, name) {
-  let result = [];
-  for (let i = 0; i < objs.length; i++) {
-    result.push(objs[i][name]);
-  }
-  return result;
+  //   let result = [];
+  //   for (let i = 0; i < objs.length; i++) {
+  //     result.push(objs[i][name]);
+  //   }
+  //   return result;
+  // for(let obj of objs)
+  // result.push(obj[name])
+  objs.map((obj) => obj[name]);
 }
