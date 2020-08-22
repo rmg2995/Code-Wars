@@ -5,21 +5,23 @@
 // The input string will only consist of lower case letters and/or spaces.
 
 function getCount(str) {
-  var vowelsCount = 0;
-  let strSplit = str.split("");
-  //console.log(strSplit)
-  for (let i = 0; i < strSplit.length; i++) {
-    if (
-      strSplit[i] == "a" ||
-      strSplit[i] == "e" ||
-      strSplit[i] == "i" ||
-      strSplit[i] == "o" ||
-      strSplit[i] == "u"
-    ) {
-      vowelsCount += 1;
-      console.log(strSplit[i]);
-    }
-  }
-  return vowelsCount;
-  // enter your majic here
+  // var vowelsCount = 0;
+  // let strSplit = str.split("");
+  // //console.log(strSplit)
+  // for (let i = 0; i < strSplit.length; i++) {
+  //   if (
+  //     strSplit[i] == "a" ||
+  //     strSplit[i] == "e" ||
+  //     strSplit[i] == "i" ||
+  //     strSplit[i] == "o" ||
+  //     strSplit[i] == "u"
+  //   ) {
+  //     vowelsCount += 1;
+  //     console.log(strSplit[i]);
+  //   }
+  // }
+  // return vowelsCount;
+  // // enter your majic here
+
+  return str.split("").filter((c) => "aeiouAEIOU".includes(c)).length;
 }
