@@ -7,12 +7,14 @@
 // filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 
 function filter_list(l) {
-  let newArr = [];
-  for (let i = 0; i < l.length; i++) {
-    if (l[i] >= 0 && l[i] === Number(l[i])) {
-      newArr.push(l[i]);
-    }
-  }
-  return newArr;
+  //   let newArr = [];
+  //   for (let i = 0; i < l.length; i++) {
+  //     if (l[i] >= 0 && l[i] === Number(l[i])) {
+  //       newArr.push(l[i]);
+  //     }
+  //   }
+  //   return newArr;
+  // return l.filter(v => typeof v == "number")
+  return l.filter(Number.isInteger);
   // Return a new array with the strings filtered out
 }
