@@ -46,17 +46,19 @@
 //     )
 //     .join("\n");
 // }
-function addSpace(word, size) {
-  const rem = size - word.length;
-  return " ".repeat(rem / 2) + word + " ".repeat(rem / 2);
-}
 
 function christmasTree(height) {
-  let treeLen = 2 * height - 1;
+  let baseLen = 2 * height - 1;
   let tree = "";
-  for (let i = 0; i < height; i++) {
-    tree += addSpace("*".repeat(1 + i * 2), treeLen);
-    tree += i == height - 1 ? "" : "\n";
+  let starLen;
+  let space;
+  for (let i = 1; i <= height; i++) {
+    starLen = i * 2 - 1;
+    space = baseLen - starLen;
+    tree += " ".repeat(space / 2) + "*".repeat(starLen) + " ".repeat(space / 2);
+    if (i != height) {
+      tree += "\n";
+    }
   }
   return tree;
 }
