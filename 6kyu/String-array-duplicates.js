@@ -32,3 +32,21 @@ function dup(s) {
   }
   return newArr;
 }
+// function dup(s) {
+//     const result = [];
+//     for(let t of s) {
+//       let r = '';
+//       let e = '';
+
+//       for (let l of t) {
+//         if(l !== e) {
+//           r += l;
+//           e = l;
+//         }
+//       }
+
+//       result.push(r);
+//     }
+
+//     return result;
+//   };
